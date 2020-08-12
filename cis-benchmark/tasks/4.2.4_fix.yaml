@@ -1,0 +1,10 @@
+---
+- name: enable protect kernel defaults
+  hosts:  kube-node
+  tasks:
+  - name: lineinfile for kernel defaults setting  
+    lineinfile:
+      path: /etc/kubernetes/kubelet-config.yaml
+      regexp: '^readOnlyPort'
+      line: 'readOnlyPort: 0'
+
