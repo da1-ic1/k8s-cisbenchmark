@@ -1,8 +1,5 @@
 ---
 
-- name: test read-only port
-  hosts: kube-node
-  tasks:
-  - name: grep for protecting kernel defaults
-    shell: ps -ef | grep kubelet | grep -e "--protect-kernel-defaults" | grep true || cat /etc/kubernetes/kubelet-config.yml | grep protectKernelDefaults | grep true
+- name: grep for protecting kernel defaults
+  shell: ps -ef | grep kubelet | grep -e "--protect-kernel-defaults" | grep true || cat /etc/kubernetes/kubelet-config.yml | grep protectKernelDefaults | grep true
 

@@ -1,6 +1,3 @@
 ---
-- name: test read-only port
-  hosts: kube-node
-  tasks:
-  - name: netstat for read-only port
-    shell: netstat -tulpn | grep 10250 
+- name: netstat for read-only port
+  shell: netstat -tulpn | grep 10250 
