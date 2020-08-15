@@ -1,3 +1,0 @@
----
-- name: netstat for read-only port
-  shell: netstat -tulpn | grep 10250 
